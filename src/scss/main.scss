@@ -2,38 +2,42 @@
 @use "nav";
 @use "variables";
 
+html,
+body {
+    height: 100%;
+}
 
 body {
     font-family: variables.$font-stack;
     color: variables.$text-primary-color;
     margin: 0 auto;
+    min-height: 100vh;
+     display: flex;
+    flex-direction: column;
 }
 
 main {
     padding-top: 1px;
-background-color: variables.$background-light;
-  color: variables.$text-color-light;
+    background-color: variables.$background-light;
+    color: variables.$text-color-light;
+   flex: 1;
 }
+
 .container {
-        max-width: 1200px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 1rem;
 }
 
-.testing1 {
-    color: variables.$text-forth-color;
-}
-
-
-
 @media (prefers-color-scheme: dark) {
-  main {
-    background: variables.$background-dark;
-    color: variables.$text-color-dark;
-  }
-  .puff {
-    background-color: variables.$box-background-dark;
-    color: variables.$box-text-dark;
-    border: 1px solid variables.$box-border-dark;
-  }
+    main {
+        background: variables.$background-dark;
+        color: variables.$text-color-dark;
+    }
+
+    .puff {
+        background-color: variables.$box-background-dark;
+        color: variables.$box-text-dark;
+        border: 1px solid variables.$box-border-dark;
+    }
 }
