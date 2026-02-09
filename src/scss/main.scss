@@ -1,7 +1,39 @@
-$font-stack: Arial, sans-serif;
-$primary-color: green;
+@use "components";
+@use "nav";
+@use "variables";
+
 
 body {
-    font: 100% $font-stack;
-    color: $primary-color;
+    font-family: variables.$font-stack;
+    color: variables.$text-primary-color;
+    margin: 0 auto;
+}
+
+main {
+    padding-top: 1px;
+background-color: variables.$background-light;
+  color: variables.$text-color-light;
+}
+.container {
+        max-width: 1200px;
+    margin: 20px auto;
+    padding: 1rem;
+}
+
+.testing1 {
+    color: variables.$text-forth-color;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  main {
+    background: variables.$background-dark;
+    color: variables.$text-color-dark;
+  }
+  .puff {
+    background-color: variables.$box-background-dark;
+    color: variables.$box-text-dark;
+    border: 1px solid variables.$box-border-dark;
+  }
 }
