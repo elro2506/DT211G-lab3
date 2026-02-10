@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Funktion för attfylla listan
   function fillList(countries) {
-    const puff = document.querySelector(".puff");
+    const puff = document.querySelector(".puff"); //punkten framför är pga att det är en klass och inte element
     if (!puff) return;
     const ul = document.createElement("ul");
 

@@ -14,3 +14,28 @@ footer {
     background-color: variables.$text-third-color;
     padding: 0.2rem 1rem 1rem 1rem;
 }
+
+
+
+@mixin photo($size, $circle) {
+    width: $size;
+    height: $size;
+
+    @if $circle {
+        border-radius: 50%;
+    } @else {
+        border-radius: 10px;
+    }
+}
+
+.photo-round {
+    @include photo(200px, true);
+}
+
+.photo-square {
+    @include photo(200px, false);
+}
+
+a:visited {
+        color: variables.$text-primary-color;
+    }

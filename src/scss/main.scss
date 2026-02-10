@@ -29,6 +29,19 @@ main {
     padding: 1rem;
 }
 
+.arstider {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+background-color: variables.$puff-background-light;
+border-radius: 20px;
+padding: 2rem;
+}
+
+nav a:visited {
+        color: variables.$text-primary-color;
+    }
+
+
 @media (prefers-color-scheme: dark) {
     main {
         background: variables.$background-dark;
@@ -40,4 +53,46 @@ main {
         color: variables.$box-text-dark;
         border: 1px solid variables.$box-border-dark;
     }
+    
+    .site-header, footer {
+        background-color: variables.$text-secondary-color;
+    }
+
+    .arstider {
+        background-color: variables.$puff-background-dark;
+    }
+
+    nav a:visited {
+        color: variables.$text-primary-color;
+    }
+  
+
+    a:visited {
+        color: variables.$text-secondary-color;
+    }
+
 }
+
+
+.bild-span {
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+
+.bild-span span {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+  width: 100%;
+}
+
+.bild-span img {
+  display: block;
+}
+

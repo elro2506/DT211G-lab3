@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/src/scss/main.scss">
-    <title>Laboration 3</title>
-    <link rel="icon" type="image/x-icon" href="/bilder/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/scss/main.scss">
+  <title>Laboration 3</title>
+  <link rel="icon" type="image/x-icon" href="/bilder/favicon.svg">
 </head>
+
 <body>
-<header class="site-header">
+  <header class="site-header">
     <div class="meny">
       <div class="header-row">
         <a href="index.html" class="logo">
@@ -29,11 +31,41 @@
   </header>
   <main>
     <section class="container">
-<h1>Vad är SASS?</h1>
-<h2>Min implementering och användning av SASS</h2>
-<h3>Fördelar</h3>
-<h3>Nackdelar</h3>
+      <h1>Vad är SASS?</h1>
+      <h2>Min implementering och användning av SASS</h2>
+      <p>Jag har exempelvis valt att använda if- och else-satser för bilder, där jag har två olika klasser med olika
+        värden. Jag har valt
+        att göra en klass som rund och den andra som fyrkant, med ytterst lite border-radius för rundade hörn.</p>
+      <div class="arstider">
+        <div class="bild-span">
+        <picture>
+        <source srcset="bilder/sommar.webp" type="image/webp">
+        <img src="public/bilder/sommar.jpg" class="photo-round" alt="Lila blommor">
+      </picture>
+                <span>SOMMAR</span>
+                   </div>
+                   <div class="bild-span">
+      <picture>
+        <source srcset="bilder/vinter.webp" type="image/webp">
+        <img src="public/bilder/vinter.jpg" class="photo-square" alt="Snö på träd">
+      </picture>
+    <span>VINTER</span>
+  </div>
+</div>
+   <p>Vidare har jag använt mig av flera funktioner inom SASS.</p>
+
+
+
+      <h3>Fördelar</h3>
+      <h3>Nackdelar</h3>
     </section>
   </main>
-  </body>
+  <footer>
+    <h3>DT211G</h3>
+    <p>Laboration 3</p>
+    <p>Elin Ronda, 2026</p>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

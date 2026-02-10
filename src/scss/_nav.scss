@@ -24,13 +24,13 @@
 }
 
 .main-nav {
-    color: variables.$text-secondary-color;
+    color: variables.$text-primary-color;
     text-decoration: none;
     font-size: 2rem;
 
     a {
         text-decoration: none;
-        color: white;
+        color: variables.$text-primary-color;
     }
 
     .active {
@@ -42,7 +42,8 @@
     :hover {
         color: rgb(75, 75, 75);
     }
-}
+
+  }
 
 .menu-toggle {
     display: none;
