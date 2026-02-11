@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   //Här gör jag en fetch på API/kursdatan och ser till så att det returneras som javascript
   async function fetchCountries() {
-    const response = await fetch('https://raw.githubusercontent.com/Ginden/capitals/master/europe.json');
+    const response = await fetch('https://jsonlint.com/datasets/continents.json');
     if (!response.ok) { //Kollar så servern svarar ok
       throw new Error('Kan inte hämta kursdata'); //Om servern inte svarar ok så skrivs detta ut
     }
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadCountries() {
     try {
       const data = await fetchCountries(); //Hämtar länder från dokumentet
-      fillList(data);  //Sparar länderna globalt
+      fillList(data.continents);  //Sparar länderna globalt
     }
     catch (error) {
       console.error("Det uppstod ett fel:", error.message);
@@ -28,15 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //Funktion för attfylla listan
-  function fillList(countries) {
+  function fillList(continents) {
     const puff = document.querySelector(".puff"); //punkten framför är pga att det är en klass och inte element
     if (!puff) return;
     const ul = document.createElement("ul");
 
     //Gör en loop för varje land och skapar en rad i listan
-    countries.forEach(item => {
+    continents.forEach((continent) => {
       const li = document.createElement("li");
-      li.textContent = `${item.properties.country}: ${item.properties.capital}`;
+      li.textContent = `${continent.name}: ${continent.largest_country ?? "-"}`;
       ul.appendChild(li); //Lägger till li i ul
     });
   
