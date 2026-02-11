@@ -98,8 +98,9 @@
       </p>
       <p>För de som använder mörkt läge på sin skärm har jag aktiverat dark mode med hjälp av "@media
         (prefers-color-scheme: dark)". Jag har
-        manuellt lagt in färger i variabler och testat mig fram vilka kontraster som kan passa bra i mörkt läge. Det är främst färgerna
-      vitt, svart och grått som använts för mörkt läge.</p>
+        manuellt lagt in färger i variabler och testat mig fram vilka kontraster som kan passa bra i mörkt läge. Det är
+        främst färgerna
+        vitt, svart och grått som använts för mörkt läge.</p>
 
 
 
@@ -120,7 +121,8 @@
       <p>Det är även, nu i början, inte alltid lätt att veta i vilken partial man bör lägga vilken kod. Detta är dock
         något jag
         tänker klarnar upp mer när man får över mer och mer på detta.</p>
-<p>Att testa på dessa funktioner har varit roligt och givande och jag ser fram emot kommande projekt för att använda kunskaperna på fler sätt.</p>
+      <p>Att testa på dessa funktioner har varit roligt och givande och jag ser fram emot kommande projekt för att
+        använda kunskaperna på fler sätt.</p>
     </section>
   </main>
   <footer>
@@ -128,7 +130,15 @@
     <p>Laboration 3</p>
     <p>Elin Ronda, 2026</p>
   </footer>
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>

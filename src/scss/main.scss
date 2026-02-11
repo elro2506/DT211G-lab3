@@ -32,7 +32,7 @@ main {
 }
 
 .arstider {
-    display: grid;
+    display: grid; //Vill ha två bilder bredvid varandra
   grid-template-columns: repeat(2, 1fr);
 background-color: variables.$puff-background-light;
 border-radius: 20px;
@@ -44,7 +44,7 @@ nav a:visited {
     }
 
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { //Mörkt läge
     main {
         background: variables.$background-dark;
         color: variables.$text-color-dark;
@@ -74,6 +74,7 @@ nav a:visited {
     a:visited {
         color: variables.$text-secondary-color;
     }
+
 .btn, .btn-sass {
     background-color: variables.$button-background-primary-dark;
     color: variables.$text-secondary-color;
@@ -94,7 +95,7 @@ nav a:visited {
 }
 
 
-.bild-span {
+.bild-span { //För att texten hamnar under bilden
   display: flex;
  flex-direction: column;
  align-items: center;
